@@ -2,7 +2,7 @@ var Friend = require('./friendModel');
 
 module.exports = {
 	getFriends: function(req, res){
-		Friend.find().exec(err, freinds){
+		Friend.find().exec(err, friends){
 			res.send(friends);
 		}
 	},
