@@ -1,0 +1,25 @@
+{
+  "name": "Full-Stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonthedecepticon/Full-Stack.git"
+  },
+  "author": "Jon Lambson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonthedecepticon/Full-Stack/issues"
+  },
+  "homepage": "https://github.com/jonthedecepticon/Full-Stack",
+  "dependencies": {
+    "body-parser": "^1.9.1",
+    "cors": "^2.5.0",
+    "express": "^4.10.0"
+  }
+}
