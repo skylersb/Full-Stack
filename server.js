@@ -1,4 +1,4 @@
-'use-strict';
+'use strict';
 
 var express = require('express'),
 	bodyParser = require('body-parser'),
@@ -22,12 +22,13 @@ app.use(cors());	//this is security. npm cors
 //ties in the index.html
 app.use(express.static(__dirname + '/public'));
 
-app.get('/friends', Friend.getFriend());
+//requests
+app.get('/friends', Friend.getFriends);
+app.post('/friends', Friend.addFriend); 
+app.delete('/friends/:id', Friend.unFriend);
 
-app.post('/friends/new', Friend.addFriend());
 
-
-mongoose.connection(databaseRefrence);
+mongoose.connect(databaseRefrence);
 connection.once('open', function(){
 	app.listen(port, function(){
 		console.log('Connection Success on mongoDB & http://localhost: ' + port)

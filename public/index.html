@@ -4,32 +4,17 @@
 	<title>Full-Stack</title>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
-<body ng-controller="myCtrl">
+<body>
 
-
-<div ng-repeat="friend in friends"><br>
-	Name: {{friend.name}},<br>
-	Age: {{friend.age}},<br>
-	Friends since: {{friend.yearMet}}<br>
-	<br>
-	<hr>
-</div>
-
-<form>
-	<input ng-model="friend.name" placeholder="Name">
-	<input ng-model="friend.age" placeholder="Age">
-	<input ng-model="friend.yearMet" placeholder="Friends since...">
-	<button ng-click="addFriend()">Add Friend</button>
-</form>
-
+<ng-view></ng-view>
 
 
 <!-- Vendors -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
 <!-- Directives, Controllers, Services -->
 <script src="js/app.js"></script>
-<script src="js/myService.js"></script>
-<script src="js/myCtrl.js"></script>
+<script src="js/friendsService.js"></script>
+<script src="js/friendsCtrl.js"></script>
 </body>
 </html>
